@@ -10,10 +10,10 @@ public class Client {
            DataInputStream dis=new DataInputStream(s.getInputStream());
            DataOutputStream dout=new DataOutputStream(s.getOutputStream());
 
-           // TAKING USER INPUT
+       
            System.out.print("\nEnter a Number : ");
            int num = scan.nextInt();
-           // WRITING INTEGER TO SERVER
+          
            dout.writeInt(num);
            String ans = (String)dis.readUTF();
            System.out.println("\nNumber "+num+

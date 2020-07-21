@@ -17,14 +17,13 @@ public class Server {
    public static void main(String[] args){
        try{
            ServerSocket ss=new ServerSocket(8080);
-           //establishes connection
+         
            Socket s=ss.accept();
            DataInputStream dis=new DataInputStream(s.getInputStream());
            DataOutputStream dout=new DataOutputStream(s.getOutputStream());
 
            int num = (int)dis.readInt();
-           // CALLING FUNCTION AND
-           // WRITING RETURN VALUE TO CLIENT
+          
            dout.writeUTF(isPrime(num));
            dout.flush();
 
